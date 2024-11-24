@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/estilosInicio.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inicio de sesión</h1>
+        <form action="/iniciosesion" method="POST">
+            <label>Ingresa tu nombre</label>
+            <input type="text" name="nombre" step="0.1" required><br>
+            <label>Ingresa tu contraseña</label>
+            <input type="text" name="contra" step="0.1" required><br>
+            <button type="submit">Verificar</button>
+        </form>
+        {% if mensaje %}
+        <div>
+            <p>{{ mensaje }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
